@@ -3,22 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>poll</title>
+    <title> dApp hosted on an ICP canister </title>
     <base href="/" />
     <link rel="icon" href="favicon.ico" />
     <link type="text/css" rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <main>
-      <img src="logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#">
-        <label for="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting"></section>
+      <div class="container">
+        <div class="title-container">
+          <h1>Simple Voting Poll</h1>
+        </div>
+        <h2 id="question">What is your favorite programming language?</h2>
+  
+        <!-- Form where users vote -->
+        <div class="form-container">
+          <form id="radioForm">
+              <label>
+                  <input type="radio" name="option" value="Rust"> Rust
+              </label><br>
+              <label>
+                  <input type="radio" name="option" value="Motoko"> Motoko
+              </label><br>
+              <label>
+                  <input type="radio" name="option" value="TypeScript"> TypeScript
+              </label><br>
+              <label>
+                  <input type="radio" name="option" value="Python"> Python
+              </label><br>
+              <button type="submit">Vote</button>
+          </form>
+        </div>
+  
+        <!-- Poll results appear here-->
+        <h2 id="results-title">Results</h2>
+        <div id="results"></div>
+      </div>
+      <button id="reset">Reset Poll</button>
+  
     </main>
   </body>
 </html>
